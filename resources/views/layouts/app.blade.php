@@ -37,8 +37,7 @@
     </footer>
 
     <div class="copyrights-section full-centred">
-        <h4>AQUI VA EL COPYRIGHT</h4>
-      <?php // include "_copyrightsSection.html.php"; ?>
+        @include('partials._copyrightsSection')
     </div>
   </div>
 </body>
