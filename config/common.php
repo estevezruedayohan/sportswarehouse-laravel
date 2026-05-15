@@ -12,12 +12,13 @@ $navLinks = [
   'privacyPolicy' => 'Privacy Policy',
 ];
 
+$desktopOrder = ['/', 'aboutUs', 'contactUs', 'products', 'login'];
 
 
 return [
 
     // Desktop Navigation items
-    'desktopNavLinks' => array_slice($navLinks, 1, 4),
+    'desktopNavLinks' => array_slice($navLinks, 1, 4) + ['login' => 'Login'],
 
     // Mobile Navigation links
     'mobileNavLinks' => array_slice($navLinks, 0, 5),

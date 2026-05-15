@@ -14,7 +14,7 @@
 <body>
   <div class="site-wrapper">
     <nav class="site-nav">
-      <?php // include "_navigationSection.html.php"; ?>
+      @include('partials._navigationSection')
     </nav>
 
     <header class="site-header">
