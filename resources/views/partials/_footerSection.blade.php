@@ -12,7 +12,7 @@
   <div class="footer-section-social">
     <h2 class="footer-links__title">Contact Sports Warehouse</h2>
     <div class="container-footer-social-links">
-
+    @include('partials._footerSocialMedia')
     </div>
   </div>
 </div>
