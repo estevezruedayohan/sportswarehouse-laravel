@@ -32,8 +32,7 @@
     </main>
 
     <footer class="site-footer">
-        <h3>AQUI VA EL FOOTER</h3>
-      <?php // include "_footerSection.html.php"; ?>
+        @include('partials._footerSection')
     </footer>
 
     <div class="copyrights-section full-centred">
