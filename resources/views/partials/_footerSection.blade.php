@@ -6,7 +6,7 @@
 
   <div class="footer-nav-products-categories">
     <h2 class="footer-links__title">Information</h2>
-    <?php //include "_footerProductsCategories.html.php"; ?>
+    @include('partials._footerProductsCategories')
   </div>
 
   <div class="footer-section-social">
