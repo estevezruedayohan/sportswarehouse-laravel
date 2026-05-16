@@ -45,6 +45,6 @@ class ContactController extends Controller
 
         $validatedData = $request->validate($rules, $messages);
 
-        return view('partials._contactSuccess', ['data' => $validatedData]);
+        return view('contactSuccess', ['data' => $validatedData]);
     }
 }
