@@ -6,41 +6,48 @@
 
 </div>
 
-<form class="form-contact" action="contactUs.php" method="post" novalidate>
+<form class="form-contact" action="{{ route('contact.submit') }}" method="post" novalidate>
+
+  {{-- Security directive against CSRF attacks, mandatory in Laravel --}}
+  @csrf
+
   <fieldset>
     <legend>Personal information</legend>
 
+    {{-- old('firsName') keep the value if the validation fails --}}
     <div class="form-row">
       <label for="firstName">First name*:</label>
-      <input type="text" id="firstName" name="firstName" required {{-- fieldValue("firstName") --}} />
-      {{-- fieldError($errors, "firstName") --}}
+      <input type="text" id="firstName" name="firstName" required value="{{ old('firstName') }}" />
+      <x-form-error field="firstName" />
     </div>
 
     <div class="form-row">
       <label for="lastName">Last name*:</label>
-      <input type="text" id="lastName" name="lastName" required {{-- fieldValue("lastName") --}} />
-      {{-- fieldError($errors, "lastName") --}}
+      <input type="text" id="lastName" name="lastName" required value="{{ old('lastName') }}" />
+      <x-form-error field="lastName" />
 
     </div>
 
     <div class="form-row">
       <label for="phoneNumber">Contact Number:</label>
-      <input type="tel" id="phoneNumber" name="phoneNumber" inputmode="numeric" required {{-- fieldValue("phoneNumber") --}} />
-      {{-- fieldError($errors, "phoneNumber") --}}
+      <input type="tel" id="phoneNumber" name="phoneNumber" inputmode="numeric" required
+        value="{{ old('phoneNumber') }}" />
+      <x-form-error field="phoneNumber" />
 
     </div>
 
     <div class="form-row">
       <label for="email">Email*:</label>
-      <input type="email" id="email" name="email" placeholder="name@email.com" required {{-- fieldValue("email") --}} />
-      {{-- fieldError($errors, "email") --}}
+      <input type="email" id="email" name="email" placeholder="name@email.com" required
+        value="{{ old('email') }}" />
+      <x-form-error field="email" />
 
     </div>
 
     <div class="form-row">
       <label for="questions">Questions ?</label>
-      <textarea id="questions" name="questions" cols="30" rows="3" required> {{-- getEncodedValue("questions") --}} </textarea>
-      {{-- fieldError($errors, "questions") --}}
+      <textarea id="questions" name="questions" cols="30" rows="3" required> {{ old('questions') }} </textarea>
+      <x-form-error field="questions" />
 
     </div>
 

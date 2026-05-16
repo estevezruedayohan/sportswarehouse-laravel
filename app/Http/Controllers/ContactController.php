@@ -36,11 +36,11 @@ class ContactController extends Controller
         $messages = [
             'string' => 'The :attribute must be valid text',
             'required' => 'The :attribute is required',
-            'min' => 'The :attribute is too short',
-            'max' => 'The :attribute is too long',
-            'phoneNumber.numeric' => 'Phone number must contain only digits',
-            'phoneNumber.digits' => 'Phone number must be exactly 10 digits',
-            'email.email' => 'The email is invalid or the domain does not exist',
+            'min' => 'The field :attribute is too short',
+            'max' => 'The field :attribute is too long',
+            'phoneNumber.numeric' => 'The :attribute must contain only digits',
+            'phoneNumber.digits' => 'The :attribute must be exactly 10 digits',
+            'email.email' => 'The :attribute is invalid or the domain does not exist',
         ];
 
         $validatedData = $request->validate($rules, $messages);
