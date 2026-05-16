@@ -7,7 +7,6 @@
   <title>@yield('title', 'SP') - Sports Warehouse</title>
   <link href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  {{-- <link rel="stylesheet" href="styles/styles.css"> --}}
   @vite(['resources/css/app.css'])
 </head>
 
@@ -27,16 +26,16 @@
     </header>
 
     <main class="site-main">
-        @yield('content')
+      @yield('content')
 
     </main>
 
     <footer class="site-footer">
-        @include('partials._footerSection')
+      @include('partials._footerSection')
     </footer>
 
     <div class="copyrights-section full-centred">
-        @include('partials._copyrightsSection')
+      @include('partials._copyrightsSection')
     </div>
   </div>
 </body>
