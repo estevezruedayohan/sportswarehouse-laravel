@@ -1,0 +1,95 @@
+/* root */
+:root {
+  /* Define CSS custom properties (variables) */
+  --white: #ffffff;
+  --black: #000000;
+  --black-30: rgba(0, 0, 0, 0.3);
+  --black-15: rgba(0, 0, 0, 0.15);
+  --grey: #595959;
+  --border-gray: #d0cfcf;
+  --light-blue: #00aced;
+  --mid-blue: #006989;
+  --dark-blue: #002936;
+  --orange: #fb6806;
+}
+
+/* General */
+* {
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Centre an item (horizontally and vertically) */
+.full-centred {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hide an element */
+.visually-hidden {
+  display: none !important;
+}
+
+/* Setting up the list items */
+li::marker {
+  content: none;
+  display: none;
+}
+
+/* Site Main */
+
+.site-main {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Copyright Section */
+
+.copyrights-section {
+  align-self: center;
+  color: var(--grey);
+  font-size: 14px;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  /* width: 100vw; */
+}
+
+.copyrights-section > * {
+  max-width: 1200px;
+}
+
+@media (min-width: 600px) {
+  .mobile-br {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .copyrights-section {
+    margin-top: 30px;
+  }
+
+  .mobile-br {
+    display: none;
+  }
+}

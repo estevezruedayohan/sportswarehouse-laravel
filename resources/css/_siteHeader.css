@@ -1,0 +1,38 @@
+/* Header */
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65px;
+  font-size: 16px;
+}
+
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.site-header__logo {
+  padding: 0 35px;
+  margin-bottom: 15px;
+}
+
+.site-header__logo img {
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  min-width: 290px;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 960px) {
+  .site-header__brand {
+    flex-direction: row;
+    gap: 5.6em;
+    justify-content: space-between;
+  }
+}

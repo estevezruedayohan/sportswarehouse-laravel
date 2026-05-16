@@ -6,11 +6,16 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans:
-        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
+  --font-sans:
+    "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Import custom site.css file */
-@import "styles.css";
+@import "_base.css";
+@import "_topNavigation.css";
+@import "_siteHeader.css";
+@import "_contactUs.css";
+
+@import "_contactSuccess.css";
+@import "_siteFooter.css";
