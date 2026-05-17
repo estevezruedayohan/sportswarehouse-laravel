@@ -56,24 +56,9 @@
         <p>The best of the best is here</p>
       </div>
       <div class="container-brand-image">
-        <div class="brand-image">
-          <img src="{{ asset('images/brands/logo_nike_1.png') }}" alt="Logo Nike" />
-        </div>
-        <div class="brand-image">
-          <img src="{{ asset('images/brands/logo_adidas_1.png') }}" alt="Logo Adidas" />
-        </div>
-        <div class="brand-image">
-          <img src="{{ asset('images/brands/logo_skins_1.png') }}" alt="Logo Skins" />
-        </div>
-        <div class="brand-image">
-          <img src="{{ asset('images/brands/logo_asics_1.png') }}" alt="Logo Asics" />
-        </div>
-        <div class="brand-image">
-          <img src="{{ asset('images/brands/logo_newbalance_1.png') }}" alt="Logo Newbalance" />
-        </div>
-        <div class="brand-image">
-          <img src="{{ asset('images/brands/logo_wilson_1.png') }}" alt="Logo Wilson" />
-        </div>
+        @foreach (config('common.featured_brands') as $brand)
+          <img src="{{ asset('images/brands/' . $brand['image']) }}" alt="{{ $brand['alt'] }}" />
+        @endforeach
       </div>
     </div>
   </section>
