@@ -14,27 +14,11 @@
   </search>
   <div class="cat-navigation">
     <ul class="cat-links" aria-label="Product Categories">
-      <li class="cat-navigation-item">
-        <a href="#">Shoes</a>
-      </li>
-      <li class="cat-navigation-item">
-        <a href="#">Helmets</a>
-      </li>
-      <li class="cat-navigation-item">
-        <a href="#">Pants</a>
-      </li>
-      <li class="cat-navigation-item">
-        <a href="#">Tops</a>
-      </li>
-      <li class="cat-navigation-item">
-        <a href="#">Balls</a>
-      </li>
-      <li class="cat-navigation-item">
-        <a href="#">Equipment</a>
-      </li>
-      <li class="cat-navigation-item">
-        <a href="#">Training gear</a>
-      </li>
+      @foreach (config('common.productsCategories') as $category)
+        <li class="cat-navigation-item">
+          <a href="{{ $category['url'] }}">{{ $category['name'] }}</a>
+        </li>
+      @endforeach
     </ul>
   </div>
 
