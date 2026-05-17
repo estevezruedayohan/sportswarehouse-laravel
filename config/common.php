@@ -108,4 +108,48 @@ return [
         'alt' => 'Logo Wilson'
       ],
     ],
+
+    // Products
+    'products'=> [
+      [
+        'image' => 'prod-image.jpg',
+        'alt' => 'Adidas Euro 16 Top Soccer Ball',
+        'normal_price' => 46.00,
+        'discount' => 15,
+        'discounted_price' => 34.95,
+        'product_name' => 'adidas Euro16 Top Soccer Ball',
+      ],
+      [
+        'image' => 'helmet.jpg',
+        'alt' => 'Pro-tec Classic Skate Helmet',
+        'normal_price' => 70.00,
+        'discount' => 0,
+        'discounted_price' => 34.95,
+        'product_name' => 'Pro-tec Classic Skate Helmet',
+      ],
+      [
+        'image' => 'waterBottle.jpg',
+        'alt' => 'Nike Sport 600ml Water Bottle',
+        'normal_price' => 17.50,
+        'discount' => 15,
+        'discounted_price' => 15.00,
+        'product_name' => 'Nike Sport 600ml Water Bottle',
+      ],
+      [
+        'image' => 'boxingGloves.jpg',
+        'alt' => 'Boxing Gloves Sting ArmaPlus',
+        'normal_price' => 79.95,
+        'discount' => 0,
+        'discounted_price' => 34.95,
+        'product_name' => 'Sting ArmaPlus Boxing Gloves',
+      ],
+      [
+        'image' => 'footyBoots.jpg',
+        'alt' => 'ASICS Football boot',
+        'normal_price' => 17.50,
+        'discount' => 15,
+        'discounted_price' => 15.00,
+        'product_name' => 'Asics Gel Lethal Tigreor 8 IT Mens',
+      ],
+    ]
 ];
