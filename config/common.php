@@ -58,5 +58,33 @@ return [
         'icon' => 'fa-telegram',
         'label' => 'Follow us on Telegram'
       ]
-    ]
+    ],
+
+    // Features Brands Catalogue
+    'featured_brands' => [
+      [
+        'image' => 'logo_nike_1.png',
+        'alt' => 'Logo Nike'
+      ],
+      [
+        'image' => 'logo_adidas_1.png',
+        'alt' => 'Logo Adidas'
+      ],
+      [
+        'image' => 'logo_skins_1.png',
+        'alt' => 'Logo Skins'
+      ],
+      [
+        'image' => 'logo_asics_1.png',
+        'alt' => 'Logo Asics'
+      ],
+      [
+        'image' => 'logo_newbalance_1.png',
+        'alt' => 'Logo Newbalance'
+      ],
+      [
+        'image' => 'logo_wilson_1.png',
+        'alt' => 'Logo Wilson'
+      ],
+    ],
 ];
