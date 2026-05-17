@@ -29,13 +29,34 @@ return [
     // Products Categories
 
     'productsCategories' => [
-      'Shoes',
-      'Helmets',
-      'Pants',
-      'tops',
-      'Balls',
-      'Equipment',
-      'Training Gear',
+      [
+        'url' => '#',
+        'name' => 'Shoes',
+      ],
+      [
+        'url' => '#',
+        'name' => 'Helmets',
+      ],
+      [
+        'url' => '#',
+        'name' => 'Pants',
+      ],
+      [
+        'url' => '#',
+        'name' => 'tops',
+      ],
+      [
+        'url' => '#',
+        'name' => 'Balls',
+      ],
+      [
+        'url' => '#',
+        'name' => 'Equipment',
+      ],
+      [
+        'url' => '#',
+        'name' => 'Training Gear',
+      ],
     ],
 
     // Social Media
