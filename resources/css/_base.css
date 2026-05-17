@@ -56,7 +56,7 @@ li::marker {
 /* Site Main */
 
 .site-main {
-  margin: 15px 0;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
