@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Psy\Readline\Hoa\Event;
 
 class Category extends Model
 {
@@ -24,6 +23,6 @@ class Category extends Model
    */
     public function products(): HasMany
     {
-      return $this->hasMany(Event::class, 'categoryId');
+      return $this->hasMany(Product::class, 'categoryId');
     }
 }
