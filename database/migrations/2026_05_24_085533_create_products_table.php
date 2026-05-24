@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 250);
             $table->string('image', 250)->nullable();
+            $table->string('alt', 250);
             $table->decimal('price', 10, 2);
             $table->decimal('saleprice', 10, 2)->nullable();
             $table->string('description', 2000);
