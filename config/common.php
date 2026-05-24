@@ -12,7 +12,7 @@ $navLinks = [
   'privacyPolicy' => 'Privacy Policy',
 ];
 
-$desktopOrder = ['/', 'aboutUs', 'contactUs', 'products', 'login'];
+// $desktopOrder = ['/', 'aboutUs', 'contactUs', 'products', 'login'];
 
 
 return [

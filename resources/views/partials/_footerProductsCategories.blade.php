@@ -1,5 +1,7 @@
 <ul class="footer-links__list">
-  @foreach (config('common.productsCategories') as $category)
-    <li class="footer-links__item"><a href="{{ $category['url'] }}">{{ $category['name'] }}</a></li>
+  @foreach ($productsCategories as $category)
+    <li class="footer-links__item"><a href="#">{{ $category['name'] }}</a></li>
+    {{-- TODO: --}}
+    {{-- href={{ route('products.category', $categoria->id) }} --}}
   @endforeach
 </ul>
