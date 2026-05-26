@@ -32,7 +32,7 @@
     @foreach ($featuredProducts as $product)
       <article class="gallery__item gallery-card">
         <div class="gallery-card__photo-frame full-centred">
-          <img src="{{ asset('images/products/' . $product->image) }}" alt="{{ $product->alt }}"
+          <img src="{{ asset('images/products/' . $product->image) }}" alt="Image of {{ $product->name }}"
             class="gallery-card__photo" />
         </div>
         <div class="gallery-card__prices full-centred">
