@@ -17,6 +17,6 @@ class CategoryController extends Controller
       // Retrieve all categories
       $featuredProducts = Product::query()->where('featured', 1)->get();
 
-      return view('index', compact('featuredProducts'));
+      return view('index', ['featuredProducts' => $featuredProducts]);
     }
 }
