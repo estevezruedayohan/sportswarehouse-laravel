@@ -33,7 +33,7 @@
   box-sizing: border-box;
   background-color: var(--dark-blue);
   max-width: 1200px;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 .cat-links {

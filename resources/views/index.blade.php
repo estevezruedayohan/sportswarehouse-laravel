@@ -22,6 +22,18 @@
     </ul>
   </div>
 
+  <section class="hero-banner">
+    <div class="hero-banner-container">
+      <div class="hero-banner_overlay-container">
+        <div class="hero-banner_overlay-text">
+          <p class="hero-banner_paragraph">View our brand new range of</p>
+          <p class="hero-banner_paragraph--lead">Sports balls</p>
+          <a href="#" class="hero-banner_cta">Shop now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="main-tittle-container">
     <h2 aria-label="Products list" class="main-tittle">
       Featured Products
