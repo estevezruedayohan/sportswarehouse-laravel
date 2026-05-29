@@ -19,7 +19,7 @@
     <header class="site-header">
       <div class="site-header__brand">
         <h1 aria-label="Company Name" class="site-header__logo">
-          <img aria-hidden="true" src="images/statics/sports-warehouse-logo.svg" alt="Company Name logo">
+          <img aria-hidden="true" src="{{ asset('images/statics/sports-warehouse-logo.svg') }}" alt="Company Name logo">
         </h1>
 
       </div>
