@@ -11,7 +11,7 @@
 
   <div class="main-tittle-container">
     <h2 aria-label="Products list" class="main-tittle">
-      Featured Products
+      {{ $searchTitle }}
     </h2>
   </div>
 

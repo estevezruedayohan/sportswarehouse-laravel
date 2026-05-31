@@ -14,6 +14,9 @@ Route::get('/viewProducts', [ProductController::class, 'index'])->name('product.
 // View Products by Category
 Route::get('/viewProducts/{id}', [ProductController::class, 'byCategory'])->name('product.category');
 
+// View Products by search -> GET /search?query=abc
+Route::get('/search', [ProductController::class, 'search'])->name('product.search');
+
 // Route to show the initial form
 Route::get('/contactUs', [ContactController::class, 'show'])->name('contact.show');
 
