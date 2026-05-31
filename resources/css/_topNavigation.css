@@ -14,7 +14,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 12px;
-  max-width: 1200px;
+  max-width: 960px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -136,5 +136,11 @@
     color: var(--white);
     /* padding: 10px 15px;
         display: block; */
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-content-container {
+    max-width: 1200px;
   }
 }

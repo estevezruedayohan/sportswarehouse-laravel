@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
+  max-width: 960px;
 }
 
 .site-header__logo {
@@ -34,5 +34,11 @@
     flex-direction: row;
     gap: 5.6em;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-header__brand {
+    max-width: 1200px;
   }
 }

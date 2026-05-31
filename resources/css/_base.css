@@ -75,7 +75,7 @@ li::marker {
 }
 
 .copyrights-section > * {
-  max-width: 1200px;
+  max-width: 960px;
 }
 
 @media (min-width: 600px) {
@@ -91,5 +91,11 @@ li::marker {
 
   .mobile-br {
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .copyrights-section > * {
+    max-width: 1200px;
   }
 }

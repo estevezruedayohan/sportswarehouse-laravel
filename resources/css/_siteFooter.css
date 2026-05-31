@@ -18,7 +18,7 @@
   color: var(--white);
   gap: 30px;
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: 960px;
   width: 100%;
 }
 
@@ -163,5 +163,11 @@
     display: flex;
     flex-grow: 1;
     padding: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-content-container {
+    max-width: 1200px;
   }
 }
