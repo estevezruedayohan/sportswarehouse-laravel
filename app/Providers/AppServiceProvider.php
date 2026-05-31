@@ -8,22 +8,25 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
-    public function register(): void
-    {
-        //
-    }
+  /**
+   * Register any application services.
+   */
+  public function register(): void
+  {
+    //
+  }
 
-    /**
-     * Bootstrap any application services.
-     */
-    public function boot(): void
-    {
-      // Registering the View Composer for the footer file
-        View::composer('partials._footerProductsCategories', function ($view) {
-          $view->with('productsCategories', Category::all());
-        });
-    }
+  /**
+   * Bootstrap any application services.
+   */
+  public function boot(): void
+  {
+    // Registering the View Composer for the footer and layout
+    View::composer([
+      'partials._footerProductsCategories',
+      'partials._productsFilter'
+    ], function ($view) {
+      $view->with('productsCategories', Category::all());
+    });
+  }
 }
