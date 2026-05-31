@@ -5,9 +5,7 @@
   align-items: flex-start;
   gap: 10px;
   max-width: 960px;
-  /* width: 270px; */
-  margin-bottom: 15px;
-  /* margin-right: 15px; */
+  /* margin-bottom: 15px; */
 }
 
 .search-input {

@@ -13,11 +13,12 @@
   flex-direction: column;
   align-items: center;
   max-width: 960px;
+  margin-bottom: 15px;
 }
 
 .site-header__logo {
   padding: 0 35px;
-  /* margin-bottom: 15px; */
+  margin-bottom: 15px;
 }
 
 .site-header__logo img {
@@ -31,9 +32,12 @@
 
 @media (min-width: 960px) {
   .site-header__brand {
+    display: flex;
     flex-direction: row;
     gap: 5.6em;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 }
 

@@ -1,8 +1,13 @@
 @extends('layouts.app')
+@push('header-search')
+  @include('partials._productsSearch')
+@endpush
+@push('header-filters-byCategory')
+  @include('partials._productsFilter')
+@endpush
 @section('title', 'Home')
 @section('content')
 
-  @include('partials/_productsFilter')
 
   <section class="hero-banner">
     <div class="hero-banner-container">

@@ -21,8 +21,12 @@
         <h1 aria-label="Company Name" class="site-header__logo">
           <img aria-hidden="true" src="{{ asset('images/statics/sports-warehouse-logo.svg') }}" alt="Company Name logo">
         </h1>
-
+        {{-- Reserved space --}}
+        @stack('header-search')
       </div>
+
+      {{-- Reserved space --}}
+      @stack('header-filters-byCategory')
     </header>
 
     <main class="site-main">

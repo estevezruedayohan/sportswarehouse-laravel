@@ -1,8 +1,13 @@
 @extends('layouts.app')
+@push('header-search')
+  @include('partials._productsSearch')
+@endpush
+@push('header-filters-byCategory')
+  @include('partials._productsFilter')
+@endpush
+
 @section('title', 'View Products')
 @section('content')
-
-  @include('partials/_productsFilter')
 
   <div class="main-tittle-container">
     <h2 aria-label="Products list" class="main-tittle">
