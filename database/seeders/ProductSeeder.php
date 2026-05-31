@@ -932,5 +932,9 @@ class ProductSeeder  extends Seeder
         'categoryId' => 7,
       ],
     ]);
+
+    Product::query()->where('id', '>', 5)->update([
+      'featured' => 0,
+    ]);
   }
 }
