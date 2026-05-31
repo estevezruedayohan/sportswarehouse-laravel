@@ -49,6 +49,10 @@
   width: 125px;
   height: 125px;
 }
+.gallery-card__photo[src$="place_holder.png"] {
+  opacity: 0.2;
+  filter: grayscale(100%);
+}
 
 .gallery-card__prices {
   font-variant-ligatures: no-common-ligatures;
