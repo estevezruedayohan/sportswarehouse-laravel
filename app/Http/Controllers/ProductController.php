@@ -61,4 +61,18 @@ class ProductController extends Controller
     // Pass data into the view
     return view('viewProducts', ["listedProducts" => $products, "searchTerm" => $searchTerm, "searchTitle" => 'Results for: "' . $searchTerm . '"']);
   }
+
+
+  /**
+   * Show product details
+   *
+   * @param integer $id
+   * @return void
+   */
+  public function showProduct(int $id)
+  {
+    $product = Product::findOrFail($id);
+
+    return view('productDetails', ['product' => $product]);
+  }
 }

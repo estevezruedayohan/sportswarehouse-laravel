@@ -14,6 +14,9 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.all
 // View Products by Category
 Route::get('/products/{id}', [ProductController::class, 'byCategory'])->name('product.category');
 
+// View Products by Category
+Route::get('/product/{id}', [ProductController::class, 'showProduct'])->name('product.show');
+
 // View Products by search -> GET /search?query=abc
 Route::get('/search', [ProductController::class, 'search'])->name('product.search');
 
