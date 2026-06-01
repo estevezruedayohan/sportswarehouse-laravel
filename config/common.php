@@ -5,11 +5,11 @@
 // Navigation items
 $navLinks = [
   'login' => 'Login',
-  '/' => 'Home',
-  'aboutUs' => 'About us',
-  'contactUs' => 'Contact us',
-  'products' => 'View Products',
-  'privacyPolicy' => 'Privacy Policy',
+  'home' => 'Home',
+  'about.show' => 'About us',
+  'contact.show' => 'Contact us',
+  'products.all' => 'View Products',
+  'privacy.show' => 'Privacy Policy',
 ];
 
 // $desktopOrder = ['/', 'aboutUs', 'contactUs', 'products', 'login'];
@@ -18,46 +18,36 @@ $navLinks = [
 return [
 
   // Desktop Navigation items
-  'desktopNavLinks' => array_slice($navLinks, 1, 4) + ['login' => 'Login'],
+  // 'desktopNavLinks' => array_slice($navLinks, 1, 4) + ['login' => 'Login'],
+  'desktopNavLinks' => [
+    'home'         => 'Home',
+    'about.show'   => 'About us',
+    'contact.show' => 'Contact us',
+    'products.all' => 'View Products',
+    'login'        => 'Login',
+  ],
 
   // Mobile Navigation links
-  'mobileNavLinks' => array_slice($navLinks, 0, 5),
+  // 'mobileNavLinks' => array_slice($navLinks, 0, 5),
+  'mobileNavLinks' => [
+    'login'        => 'Login',
+    'home'         => 'Home',
+    'about.show'   => 'About us',
+    'contact.show' => 'Contact us',
+    'products.all' => 'View Products',
+  ],
 
   // Footer navigation links
-  'footerNavLinks' => array_slice($navLinks, 1, 6),
+  // 'footerNavLinks' => array_slice($navLinks, 1, 6),
+  'footerNavLinks' => [
+    'home'         => 'Home',
+    'about.show'   => 'About us',
+    'contact.show' => 'Contact us',
+    'products.all' => 'View Products',
+    'login'        => 'Login',
+    'privacy.show' => 'Privacy Policy',
+  ],
 
-  // Products Categories
-
-  // 'productsCategories' => [
-  //   [
-  //     'url' => '#',
-  //     'name' => 'Shoes',
-  //   ],
-  //   [
-  //     'url' => '#',
-  //     'name' => 'Helmets',
-  //   ],
-  //   [
-  //     'url' => '#',
-  //     'name' => 'Pants',
-  //   ],
-  //   [
-  //     'url' => '#',
-  //     'name' => 'tops',
-  //   ],
-  //   [
-  //     'url' => '#',
-  //     'name' => 'Balls',
-  //   ],
-  //   [
-  //     'url' => '#',
-  //     'name' => 'Equipment',
-  //   ],
-  //   [
-  //     'url' => '#',
-  //     'name' => 'Training Gear',
-  //   ],
-  // ],
 
   // Social Media
   'social_links' => [
@@ -109,42 +99,4 @@ return [
     ],
   ],
 
-  // Products
-  // 'products'=> [
-  //   [
-  //     'image' => 'prod-image.jpg',
-  //     'alt' => 'Adidas Euro 16 Top Soccer Ball',
-  //     'normal_price' => 46.00,
-  //     'discount' => 24.02,
-  //     'product_name' => 'adidas Euro16 Top Soccer Ball',
-  //   ],
-  //   [
-  //     'image' => 'helmet.jpg',
-  //     'alt' => 'Pro-tec Classic Skate Helmet',
-  //     'normal_price' => 70.00,
-  //     'discount' => 0,
-  //     'product_name' => 'Pro-tec Classic Skate Helmet',
-  //   ],
-  //   [
-  //     'image' => 'waterBottle.jpg',
-  //     'alt' => 'Nike Sport 600ml Water Bottle',
-  //     'normal_price' => 17.50,
-  //     'discount' => 14.29,
-  //     'product_name' => 'Nike Sport 600ml Water Bottle',
-  //   ],
-  //   [
-  //     'image' => 'boxingGloves.jpg',
-  //     'alt' => 'Boxing Gloves Sting ArmaPlus',
-  //     'normal_price' => 79.95,
-  //     'discount' => 0,
-  //     'product_name' => 'Sting ArmaPlus Boxing Gloves',
-  //   ],
-  //   [
-  //     'image' => 'footyBoots.jpg',
-  //     'alt' => 'ASICS Football boot',
-  //     'normal_price' => 230,
-  //     'discount' => 21.74,
-  //     'product_name' => 'Asics Gel Lethal Tigreor 8 IT Mens',
-  //   ],
-  // ]
 ];

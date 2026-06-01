@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // View All Products
-Route::get('/viewProducts', [ProductController::class, 'index'])->name('product.index');
+Route::get('/products', [ProductController::class, 'index'])->name('products.all');
 
 // View Products by Category
-Route::get('/viewProducts/{id}', [ProductController::class, 'byCategory'])->name('product.category');
+Route::get('/products/{id}', [ProductController::class, 'byCategory'])->name('product.category');
 
 // View Products by search -> GET /search?query=abc
 Route::get('/search', [ProductController::class, 'search'])->name('product.search');
@@ -22,3 +22,9 @@ Route::get('/contactUs', [ContactController::class, 'show'])->name('contact.show
 
 // Route to process the data when submit
 Route::post('/contactUs', [ContactController::class, 'submit'])->name('contact.submit');
+
+// Route to show the initial form
+Route::view('/login', 'login')->name('login');
+
+// Route to show the initial form
+Route::view('/aboutUs', 'aboutUs')->name('about.show');
