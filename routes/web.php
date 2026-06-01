@@ -28,3 +28,6 @@ Route::view('/login', 'login')->name('login');
 
 // Route to show the initial form
 Route::view('/aboutUs', 'aboutUs')->name('about.show');
+
+// Route to show the initial form
+Route::view('/privacy', 'privacy')->name('privacy.show');

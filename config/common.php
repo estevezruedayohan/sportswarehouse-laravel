@@ -18,35 +18,35 @@ $navLinks = [
 return [
 
   // Desktop Navigation items
-  // 'desktopNavLinks' => array_slice($navLinks, 1, 4) + ['login' => 'Login'],
-  'desktopNavLinks' => [
-    'home'         => 'Home',
-    'about.show'   => 'About us',
-    'contact.show' => 'Contact us',
-    'products.all' => 'View Products',
-    'login'        => 'Login',
-  ],
+  'desktopNavLinks' => array_slice($navLinks, 1, 4) + ['login' => 'Login'],
+  // 'desktopNavLinks' => [
+  //   'home'         => 'Home',
+  //   'about.show'   => 'About us',
+  //   'contact.show' => 'Contact us',
+  //   'products.all' => 'View Products',
+  //   'login'        => 'Login',
+  // ],
 
   // Mobile Navigation links
-  // 'mobileNavLinks' => array_slice($navLinks, 0, 5),
-  'mobileNavLinks' => [
-    'login'        => 'Login',
-    'home'         => 'Home',
-    'about.show'   => 'About us',
-    'contact.show' => 'Contact us',
-    'products.all' => 'View Products',
-  ],
+  'mobileNavLinks' => array_slice($navLinks, 0, 5),
+  // 'mobileNavLinks' => [
+  //   'login'        => 'Login',
+  //   'home'         => 'Home',
+  //   'about.show'   => 'About us',
+  //   'contact.show' => 'Contact us',
+  //   'products.all' => 'View Products',
+  // ],
 
   // Footer navigation links
-  // 'footerNavLinks' => array_slice($navLinks, 1, 6),
-  'footerNavLinks' => [
-    'home'         => 'Home',
-    'about.show'   => 'About us',
-    'contact.show' => 'Contact us',
-    'products.all' => 'View Products',
-    'login'        => 'Login',
-    'privacy.show' => 'Privacy Policy',
-  ],
+  'footerNavLinks' => array_slice($navLinks, 1, 6),
+  // 'footerNavLinks' => [
+  //   'home'         => 'Home',
+  //   'about.show'   => 'About us',
+  //   'contact.show' => 'Contact us',
+  //   'products.all' => 'View Products',
+  //   'login'        => 'Login',
+  //   'privacy.show' => 'Privacy Policy',
+  // ],
 
 
   // Social Media
