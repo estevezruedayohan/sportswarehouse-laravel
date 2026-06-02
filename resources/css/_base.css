@@ -6,6 +6,7 @@
   --black-30: rgba(0, 0, 0, 0.3);
   --black-15: rgba(0, 0, 0, 0.15);
   --grey: #595959;
+  --mid-grey: #4b5563;
   --border-gray: #d0cfcf;
   --light-blue: #00aced;
   --mid-blue: #006989;
@@ -66,9 +67,6 @@ li::marker {
 
 .error-page {
   display: flex;
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   background-color: var(--white);
   width: 100%;
 }
@@ -94,6 +92,27 @@ li::marker {
   line-height: 1.625;
   margin: 0;
 }
+/* Button secondary */
+.btn-secondary {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--mid-blue);
+  background-color: transparent;
+  border: 2px solid var(--mid-blue);
+  border-radius: 5px;
+  padding: 12px 24px;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--mid-blue);
+  color: #ffffff;
+}
 
 /* Copyright Section */
 
@@ -104,7 +123,6 @@ li::marker {
   margin-top: 15px;
   padding-bottom: 15px;
   text-align: center;
-  /* width: 100vw; */
 }
 
 .copyrights-section > * {
