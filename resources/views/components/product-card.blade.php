@@ -1,7 +1,7 @@
 <a href="{{ route('product.show', $product->id) }}" class="gallery-card-link">
   <article class="gallery__item gallery-card">
     <div class="gallery-card__photo-frame full-centred">
-      <img src="{{ $product->imageUrl }}" alt="Image of {{ $product->name }}" class="gallery-card__photo" />
+      <img src="{{ $product->imageUrl }}" alt="Image of {{ $product->name }}" class="gallery-card__photo">
     </div>
     <div class="gallery-card__prices full-centred">
       @if ($product->saleprice)

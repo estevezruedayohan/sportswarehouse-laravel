@@ -46,7 +46,7 @@
       </div>
       <div class="container-brand-image">
         @foreach (config('common.featured_brands') as $brand)
-          <img src="{{ asset('images/brands/' . $brand['image']) }}" alt="{{ $brand['alt'] }}" />
+          <img src="{{ asset('images/brands/' . $brand['image']) }}" alt="{{ $brand['alt'] }}">
         @endforeach
       </div>
     </div>
