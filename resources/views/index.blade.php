@@ -9,7 +9,7 @@
 @section('content')
 
 
-  <section class="hero-banner">
+  <div class="hero-banner">
     <div class="hero-banner-container">
       <div class="hero-banner_overlay-container">
         <div class="hero-banner_overlay-text">
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <div class="main-tittle-container">
     <h2 aria-label="Products list" class="main-tittle">
