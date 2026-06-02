@@ -69,4 +69,10 @@
   .btn-secondary {
     display: inline-block;
   }
+
+  @media (min-width: 1200px) {
+    .product-detail-page {
+      max-width: 1200px;
+    }
+  }
 }

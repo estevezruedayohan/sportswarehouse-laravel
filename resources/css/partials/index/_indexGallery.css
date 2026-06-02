@@ -25,6 +25,10 @@
   margin-bottom: 16px;
 }
 
+/* Conditional behavior for gallery from grid to block so as to show the empty-state block */
+.gallery:has(.gallery__empty-state) {
+  display: block;
+}
 .gallery-card {
   display: flex;
   flex-direction: column;
@@ -97,5 +101,70 @@
   }
   .gallery {
     max-width: 1200px;
+  }
+}
+
+.gallery__empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.gallery__empty-icon {
+  font-size: 48px;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.gallery__empty-state h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--dark-blue);
+  margin-top: 0;
+}
+
+.gallery__empty-state p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--gray);
+}
+
+@media (min-width: 960px) {
+  .gallery__empty-state {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "icon tex" "title button";
+    gap: 20px 40px;
+    text-align: left;
+    align-items: center;
+    max-width: 800px;
+    margin: 40px auto;
+  }
+
+  .gallery__empty-icon {
+    grid-area: icon;
+    margin-bottom: 0;
+    justify-self: center;
+  }
+
+  .gallery__empty-state h3 {
+    grid-area: title;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .gallery__empty-state {
+    grid-area: text;
+    margin-bottom: 0;
+  }
+
+  .gallery__empty-state .btn-secondary {
+    grid-area: button;
+    justify-self: start;
+    width: auto;
   }
 }
