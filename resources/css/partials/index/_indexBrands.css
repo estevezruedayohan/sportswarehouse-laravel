@@ -42,7 +42,8 @@
 }
 
 .section-content p:nth-child(2) {
-  color: var(--light-blue);
+  color: var(--mid-blue);
+  font-weight: 700;
 }
 
 .container-brand-image {

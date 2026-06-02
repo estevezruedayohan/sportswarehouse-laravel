@@ -12,6 +12,7 @@
 
 .product-detail__title {
   font-size: 28px;
+  color: var(--mid-blue);
   margin: 0;
   grid-area: title;
 }
@@ -76,16 +77,17 @@
 
 .product-detail__description {
   grid-area: description;
+  color: var(--mid-grey);
 }
 
 .product-detail__description h3 {
+  font-weight: 600;
   margin-top: 0;
   margin-bottom: 8px;
 }
 
 .product-detail__description p {
   line-height: 1.6;
-  color: var(--mid-grey);
   margin: 0;
 }
 
@@ -141,12 +143,18 @@
     max-height: 220px;
   }
   .product-detail__actions {
+    display: flex;
     flex-direction: row;
     gap: 15px;
     margin-top: 15px;
+    width: 100%;
   }
-  .btn-primary {
-    width: auto;
+  .btn-primary,
+  .product-detail__actions .btn-secondary {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
   }
 }
 
