@@ -34,7 +34,7 @@
         <!-- Creative action buttons -->
         <div class="product-detail__actions">
           <button class="btn-primary">Add to Cart</button>
-          <a href="{{ route('products.all') }}" class="btn-secondary">Back to Products</a>
+          <x-btn-secondary route="products.all" label="Back to Products" />
         </div>
       </div>
 
