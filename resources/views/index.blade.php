@@ -15,7 +15,7 @@
         <div class="hero-banner_overlay-text">
           <p class="hero-banner_paragraph">View our brand new range of</p>
           <p class="hero-banner_paragraph--lead">Sports balls</p>
-          <a href="#" class="hero-banner_cta">Shop now</a>
+          <a href="{{ route('products.all') }}" class="hero-banner_cta">Shop now</a>
         </div>
       </div>
     </div>
