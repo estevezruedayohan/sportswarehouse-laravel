@@ -23,6 +23,9 @@ Route::post('/cart/save/{id}', [ProductController::class, 'addToCart'])->name('c
 // Remove Products to cart
 Route::delete('/cart/remove/{id}', [ProductController::class, 'removeFromCart'])->name('cart.remove');
 
+// View Cart
+Route::get('/cart/view', [ProductController::class, 'viewCart'])->name('cart.view');
+
 // View Products by search -> GET /search?query=abc
 Route::get('/search', [ProductController::class, 'search'])->name('product.search');
 

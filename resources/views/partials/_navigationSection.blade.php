@@ -34,10 +34,10 @@
   </ul>
 
   <div class="right-nav">
-    <a href="#" aria-label="View shopping cart" class="cart-link">
+    <a href="{{ route('cart.view') }}" aria-label="View shopping cart" class="cart-link">
       <i class="fa-solid fa-shopping-cart" aria-hidden="true"></i>
       <span>View Cart</span>
-      <span class="cart-count"> 0 items</span>
+      <span class="cart-count"> {{ session()->has('cart') ? array_sum(session('cart')) : '0' }} items</span>
     </a>
   </div>
 

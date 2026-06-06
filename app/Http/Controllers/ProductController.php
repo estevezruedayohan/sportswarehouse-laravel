@@ -120,19 +120,66 @@ class ProductController extends Controller
   {
     // Get the current list of saved products (from session)
     // Default to empty list
-    // $savedProducts = session()->get("saved_products", []);
-    $savedProducts = Session::get("saved_products", []);
+    // $cart = session()->get("cart", []);
+    $cart = Session::get("cart", []);
+    $key = array_search($id, $cart);
 
-    // Add the new product ID to the list (if it's not already there)
-    if (!in_array($id, $savedProducts)) {
-      $savedProducts[] = $id;
+    // Remove the new product ID from the list (only if it exists)
+    if ($key !== false) {
+      unset($cart[$key]);
+      // Condense the array to cover the gap of the missing value
+      $cart = array_values($cart);
+      // Save the updated list (into session)
+      // session()->put("cart", $cart);
+      Session::put("cart", $cart);
     }
 
-    // Save the updated list (into session)
-    // session()->put("saved_products", $savedProducts);
-    Session::put("saved_products", $savedProducts);
 
     // Redirect user back where they came from
-    return redirect()->back()->with("message", "Event saved successfully! 🎟");
+    return redirect()->back()->with("message", "Item removed from your cart!");
+  }
+
+  /**
+   * Show Cart
+   *
+   * @return void
+   */
+  public function viewCart()
+  {
+    // Get the saved products IDs
+    $cart = Session::get("cart", []);
+
+    // TODO:
+    // if the cart is empty, return a message
+    // if(empty($cart)){
+    //   return view('cart', ["message" => "Your Cart is Empty"]);
+    // }
+
+    // Extract the product ids from the cart
+    $productIds = array_keys($cart);
+
+    // Fetch the actual cart from the db
+    // $savedProducts = Product::whereIn('id', $productIds, "and", false)->get();
+    $cartProducts = Product::on()->whereIn('id', $productIds)->get();
+
+    // Create a totalizer
+    $totalCartPrice = 0;
+
+    foreach ($cartProducts as $product) {
+      // Find the quantity saved using ID product
+      $quantity = $cart[$product->id];
+
+      // create a dynamic attribute to save quantity
+      $product->quantity = $quantity;
+
+      // Current price -> if saleprice or normalprice
+      $currentPrice = $product->saleprice ?? $product->price;
+
+      // Create subtotal for product and add it to totalprice
+      $product->subtotal = $currentPrice * $quantity;
+      $totalCartPrice += $product->subtotal;
+    }
+
+    return view('cart', ['cartProducts' => $cartProducts, 'totalCartPrice' => $totalCartPrice]);
   }
 }
