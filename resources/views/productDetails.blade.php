@@ -6,7 +6,7 @@
     <div class="product-detail">
 
       <h1 class="product-detail__title">{{ $product->name }}</h1>
-      <span class="product-detail__category">Category {{ $category->name }}</span>
+      <span class="product-detail__category">Category {{ $product->category->name }}</span>
 
       <div class="product-detail__media full-centred">
         <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="gallery-card__photo product-detail__image">
@@ -30,10 +30,12 @@
       </div>
 
       <!-- Creative action buttons -->
-      <div class="product-detail__actions">
-        <button class="btn-primary">Add to Cart</button>
+      <form action="{{ route('cart.add', $product->id) }}" method="POST" class="product-detail__actions">
+        @csrf
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit" class="btn-primary">Add to Cart</button>
         <x-btn-secondary route="products.all" label="Back to Products" />
-      </div>
+      </form>
 
     </div>
 

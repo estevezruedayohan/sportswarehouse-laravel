@@ -17,6 +17,12 @@ Route::get('/products/{id}', [ProductController::class, 'byCategory'])->name('pr
 // View Products by Category
 Route::get('/product/{id}', [ProductController::class, 'showProduct'])->name('product.show');
 
+// Add Products to cart
+Route::post('/cart/save/{id}', [ProductController::class, 'addToCart'])->name('cart.add');
+
+// Remove Products to cart
+Route::delete('/cart/remove/{id}', [ProductController::class, 'removeFromCart'])->name('cart.remove');
+
 // View Products by search -> GET /search?query=abc
 Route::get('/search', [ProductController::class, 'search'])->name('product.search');
 

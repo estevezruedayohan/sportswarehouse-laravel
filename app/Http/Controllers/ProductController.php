@@ -73,9 +73,9 @@ class ProductController extends Controller
   public function showProduct(int $id)
   {
     $product = Product::findOrFail($id);
-    $category = Category::findOrFail($product->categoryId);
+    // $category = Category::findOrFail($product->categoryId);
 
-    return view('productDetails', ['product' => $product, 'category' => $category]);
+    return view('productDetails', ['product' => $product]);
   }
 
   /**
@@ -83,7 +83,40 @@ class ProductController extends Controller
    *
    * @param integer $id Product ID
    */
-  public function save(int $id)
+  public function addToCart(Request $request, int $id)
+  {
+    // Security Check if the product exist on product table
+    Product::findOrFail($id);
+
+    // To implement - get the value of quantity of products from form
+    $quantity = (int) $request->input('quantity', 1);
+
+    // Get the current list of saved products (from session)
+    // Default to empty list
+    // $cart = session()->get("cart", []);
+    $cart = Session::get("cart", []);
+
+    // if product already exists in the cart, add the quantity, if not add it with the quantity initial
+    if (array_key_exists($id, $cart)) {
+      $cart[$id] += $quantity;
+    } else {
+      $cart[$id] = $quantity;
+    }
+
+    // Save the updated list (into session)
+    // session()->put("cart", $cart);
+    Session::put("cart", $cart);
+
+    // Redirect user back where they came from
+    return redirect()->back()->with("message", "Product Added to Cart!");
+  }
+
+  /**
+   * Remove a product from the cart
+   *
+   * @param integer $id Product ID
+   */
+  public function removeFromCart(int $id)
   {
     // Get the current list of saved products (from session)
     // Default to empty list
