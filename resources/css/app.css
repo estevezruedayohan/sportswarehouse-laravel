@@ -12,7 +12,7 @@
 }
 
 /* Import custom site.css file */
-@import "_base.css";
+@import "_layout.css";
 @import "_topNavigation.css";
 @import "_siteHeader.css";
 

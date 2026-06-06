@@ -28,7 +28,6 @@
   gap: 15px;
 
   width: 100%;
-  max-width: 960px;
 }
 
 .section-content {
@@ -75,6 +74,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 960px;
   }
 
   .section-content {
@@ -92,6 +92,8 @@
   .brands-section {
     max-width: 1200px;
   }
+
+  .brands-section__content,
   .section-tittle-container {
     max-width: 1200px;
   }

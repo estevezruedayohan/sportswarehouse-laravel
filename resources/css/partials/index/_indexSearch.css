@@ -5,7 +5,6 @@
   align-items: flex-start;
   gap: 10px;
   max-width: 960px;
-  /* margin-bottom: 15px; */
 }
 
 .search-input {
@@ -27,7 +26,7 @@
 }
 
 .cat-navigation {
-  padding: 18px 28px 18px 27px;
+  padding: 18px 27px;
   width: 100%;
   box-sizing: border-box;
   background-color: var(--dark-blue);
@@ -65,7 +64,6 @@
 .cat-navigation-item a:focus {
   background-color: var(--light-blue);
   color: var(--dark-blue);
-  /* border-radius:50px 0 0 50px; */
 }
 
 @media (min-width: 600px) {
@@ -78,6 +76,7 @@
   .cat-navigation {
     margin-right: 0;
     border-radius: 50px 0 0 50px;
+    padding: 13px 20px;
   }
 
   .cat-links {
@@ -86,13 +85,12 @@
   }
 
   .cat-navigation-item {
-    padding: 5px 20px 5px 15px;
     width: auto;
     border: none;
   }
 
   .cat-navigation-item a {
-    padding: 5px 20px 5px 15px;
+    padding: 7px 20px 7px 15px;
   }
 
   .cat-navigation-item a:hover,

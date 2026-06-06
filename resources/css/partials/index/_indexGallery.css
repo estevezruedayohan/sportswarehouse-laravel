@@ -22,13 +22,19 @@
   align-items: flex-start;
   padding: 15px;
   width: 100%;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 /* Conditional behavior for gallery from grid to block so as to show the empty-state block */
 .gallery:has(.gallery__empty-state) {
   display: block;
 }
+
+.gallery-card-link {
+  display: flex;
+  justify-content: center;
+}
+
 .gallery-card {
   display: flex;
   flex-direction: column;
@@ -92,7 +98,7 @@
 @media (min-width: 960px) {
   .gallery {
     max-width: 960px;
-    margin: 0 auto 16px auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1200px) {
