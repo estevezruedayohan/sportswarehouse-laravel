@@ -12,6 +12,9 @@
   --mid-blue: #006989;
   --dark-blue: #002936;
   --orange: #fb6806;
+  --light-green: #ecfdf5;
+  --mid-green: #10b981;
+  --green: #065f46;
 }
 
 /* General */
@@ -112,6 +115,47 @@ li::marker {
 .btn-secondary:hover {
   background-color: var(--mid-blue);
   color: #ffffff;
+}
+
+/* FLASH MESSAGE ALERTS (ALERTS) */
+
+.flash-alert {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 960px;
+  width: calc(100%-40px);
+  animation: slideDown 0.4s ease-out;
+}
+
+.flash-alert--success {
+  background-color: var(--light-green);
+  border: 1px solid var(--mid-green);
+  color: var(--green);
+}
+
+.flash-alert__icon {
+  font-size: 20px;
+}
+.flash-alert__content p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600px;
+  line-height: 1.4;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Copyright Section */

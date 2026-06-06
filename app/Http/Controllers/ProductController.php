@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
@@ -75,5 +76,30 @@ class ProductController extends Controller
     $category = Category::findOrFail($product->categoryId);
 
     return view('productDetails', ['product' => $product, 'category' => $category]);
+  }
+
+  /**
+   * Save a product to session memory
+   *
+   * @param integer $id Product ID
+   */
+  public function save(int $id)
+  {
+    // Get the current list of saved products (from session)
+    // Default to empty list
+    // $savedProducts = session()->get("saved_products", []);
+    $savedProducts = Session::get("saved_products", []);
+
+    // Add the new product ID to the list (if it's not already there)
+    if (!in_array($id, $savedProducts)) {
+      $savedProducts[] = $id;
+    }
+
+    // Save the updated list (into session)
+    // session()->put("saved_products", $savedProducts);
+    Session::put("saved_products", $savedProducts);
+
+    // Redirect user back where they came from
+    return redirect()->back()->with("message", "Event saved successfully! 🎟");
   }
 }

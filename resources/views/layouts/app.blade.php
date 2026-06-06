@@ -30,6 +30,18 @@
     </header>
 
     <main class="site-main">
+      @if (session()->has('message'))
+        <!-- 1. Check if the controller sent a load called "message" -->
+        <div class="flash-alert flash-alert--success" role="alert">
+          <div class="flash-alert__icon">
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+          </div>
+          <div class="flash-alert__content">
+            <!-- 2. Render the exact text sent by the controller ("Product added to the Cart successfully! ") -->
+            <p>{{ session('message') }}</p>
+          </div>
+        </div>
+      @endif
       @yield('content')
 
     </main>
