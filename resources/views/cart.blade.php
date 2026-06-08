@@ -10,34 +10,59 @@
 @section('content')
 
   <div class="main-tittle-container">
-    <h2 aria-label="Products list" class="main-tittle">
-      My Cart. You have {{ $cartProducts->sum('quantity') }} Items in your cart. Total $ {{ $totalCartPrice }}
+    <h2 aria-label="Cart Shopping" class="main-tittle">
+      My Cart. You have {{ $cartProducts->sum('quantity') }} Items in your cart.
     </h2>
   </div>
 
-  {{-- <div class="gallery">
+  <div class="cart-container">
 
-    @forelse ($cartProducts as $product)
-      <x-product-card :product=$product />
+    <div class="cart-list">
 
-    @empty
+      @forelse ($cartProducts as $product)
+        <x-cart-item :product=$product />
 
-      <div class="gallery__empty-state">
-        <div class="gallery__empty-icon">
-          <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+      @empty
+
+        <div class="gallery__empty-state">
+          <div class="gallery__empty-icon">
+            <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+          </div>
+          <h3>Your cart is Empty</h3>
+          <x-btn-secondary route="products.all" label="Continue Shopping" />
+
         </div>
-        <h3>No products found</h3>
-        @if (request()->routeIs('product.search'))
-          <p>We couldn't find any match for your search term <strong>"{{ request('query') }}"</strong>. Please check your
-            spelling or tray another keyword.</p>
-        @else
-          <p>There are currently no sports products available in the <strong>"{{ $searchTitle }}"</strong>. Check back
-            soon!</p>
-        @endif
-        <x-btn-secondary route="products.all" label="Continue Shopping" />
-      </div>
-    @endforelse
+      @endforelse
 
-  </div> --}}
+
+    </div>
+
+    @if (session('cart') && count(session('cart')) > 0)
+      <aside class="order-summary">
+        <h3 class="order-summary__title">Order Summary</h3>
+        <dl class="order-summary__list">
+          <div class="order-summary__group">
+            <dt class="order-summary__label">Subtotal {{ $cartProducts->sum('quantity') }} items</dt>
+            <dd class="order-summary__value">${{ $totalCartPrice }}</dd>
+          </div>
+          <div class="order-summary__group">
+            <dt class="order-summary__label">Shipping</dt>
+            <dd class="order-summary__value">$5.00</dd>
+          </div>
+          <div class="order-summary__group">
+            <dt class="order-summary__label">Promo Code</dt>
+            <dd class="order-summary__value order-summary__value--discount">-$10.00</dd>
+          </div>
+          <div class="order-summary__group order-summary__group--total">
+            <dt class="order-summary__label">Estimated Total</dt>
+            <dd class="order-summary__value">$200 </dd>
+          </div>
+        </dl>
+        <button type="button" class="order-summary__button">Proceed to Checkout</button>
+        <x-btn-secondary route="products.all" label="Continue Shopping" />
+      </aside>
+    @endif
+
+  </div>
 
 @endsection
