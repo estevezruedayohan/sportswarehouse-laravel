@@ -122,21 +122,23 @@ class ProductController extends Controller
     // Default to empty list
     // $cart = session()->get("cart", []);
     $cart = Session::get("cart", []);
-    $key = array_search($id, $cart);
 
-    // Remove the new product ID from the list (only if it exists)
-    if ($key !== false) {
-      unset($cart[$key]);
-      // Condense the array to cover the gap of the missing value
-      $cart = array_values($cart);
+    // default message when the item is not in saved products
+    $message = "This item was not found in your cart";
+
+    if (array_key_exists($id, $cart)) {
+      // Remove the new product ID from the list (only if it exists)
+      unset($cart[$id]);
       // Save the updated list (into session)
       // session()->put("cart", $cart);
       Session::put("cart", $cart);
+
+      $message = "Item removed from your cart!";
     }
 
 
     // Redirect user back where they came from
-    return redirect()->back()->with("message", "Item removed from your cart!");
+    return redirect()->back()->with("message", $message);
   }
 
   /**
