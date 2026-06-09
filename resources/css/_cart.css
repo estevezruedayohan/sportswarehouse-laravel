@@ -1,0 +1,311 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 15px;
+}
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px;
+  width: 100%;
+}
+
+/* Cart-item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px; /* Border radius suave */
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Image - left */
+.cart-item__media {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.cart-item__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right side: Details */
+.cart-item__details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.cart-item__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--mid-blue);
+  margin: 0;
+}
+
+.cart-item__category {
+  font-size: 0.85rem;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Prices */
+.cart-item__prices {
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+/* Sale prices */
+.cart-item__offer-prices {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item__discounted-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--orange); /* Color rojo o destacado para la oferta */
+}
+
+.cart-item__previous-price {
+  font-size: 0.85rem;
+  color: var(--grey); /* Gris más claro */
+}
+
+.cart-item__previous-price span {
+  text-decoration: line-through; /* Tachado */
+}
+
+/* Normal price */
+.cart-item__normal-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--mid-grey); /* Gris normal */
+}
+
+/* Actions */
+.cart-item__actions {
+  display: flex;
+  justify-content: space-between; /* Selector a la izq, Botón Remove a la der */
+  align-items: center;
+  margin-top: 4px;
+  width: 100%;
+}
+
+/* Selector de Cantidades (Stepper) */
+.cart-item__quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--light-grey);
+}
+
+.stepper-btn {
+  background: none;
+  border: none;
+  padding: 6px 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--mid-grey);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.stepper-btn:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.cart-item__quantity {
+  min-width: 32px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark-blue);
+  user-select: none;
+}
+
+/* Botón de Remover */
+.cart-item__submit .btn-remove {
+  background-color: transparent;
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cart-item__submit .btn-remove:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+/* Contenedor principal del resumen */
+.order-summary {
+  background-color: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+  max-width: 380px; /* Evita que se estire demasiado en pantallas anchas */
+  margin-top: 20px; /* Separación respecto a la lista de productos en el main flex-column */
+  margin-bottom: 20px;
+}
+
+/* Título del resumen (Más resaltado) */
+.order-summary__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-top: 0;
+  margin-bottom: 20px;
+  /* text-transform: uppercase; */
+  /* letter-spacing: 0.05em; */
+}
+
+/* Lista contenedora (Alineada en columna) */
+.order-summary__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+/* Filas internas (dt y dd alineados en línea frente a frente) */
+.order-summary__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Etiquetas de conceptos */
+.order-summary__label {
+  color: var(--grey);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Valores de los precios */
+.order-summary__value {
+  color: var(--mid-grey);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Estilo especial para el descuento promocional */
+.order-summary__value--discount {
+  color: var(--mid-green-2); /* Verde sutil para denotar ahorro */
+  font-weight: 600;
+}
+
+/* Grupo de Total (Línea divisoria superior y máximo resaltado) */
+.order-summary__group--total {
+  border-top: 2px solid var(--border-gray); /* Línea que simula la totalización */
+  margin-top: 6px;
+  padding-top: 16px;
+}
+
+.order-summary__group--total .order-summary__label {
+  color: var(--dark-blue);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.order-summary__group--total .order-summary__value {
+  color: var(--mid-blue);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* Botón de Checkout (Centrado y vistoso) */
+.order-summary__button {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto; /* Centrado horizontal dentro del aside */
+  margin-bottom: 16px;
+  background-color: var(--mid-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+/* Efectos interactivos respetando la paleta */
+.order-summary__button:hover {
+  background-color: var(--dark-blue);
+}
+
+.order-summary__button:active {
+  transform: scale(0.98); /* Efecto de pulsación ligera */
+}
+
+/* Modificador específico para el botón de continuar comprando dentro del aside */
+.order-summary .btn-secondary {
+  display: block; /* Cambia a bloque para permitir el centrado automático */
+  width: 100%; /* Fuerza a ocupar el 100% del contenedor disponible */
+  max-width: 280px; /* Mismo ancho máximo exacto que el botón superior */
+  margin: 0 auto; /* Centrado horizontal perfecto dentro del aside */
+  box-sizing: border-box; /* Asegura que el padding interno no deforme el tamaño */
+}
+
+@media (min-width: 960px) {
+  .cart-container {
+    flex-direction: row; /* Alinea lista a la izquierda y aside a la derecha */
+    align-items: flex-start; /* Evita que el aside se estire verticalmente */
+    justify-content: center; /* Centra el conjunto en la pantalla */
+    gap: 40px; /* Espacio de separación entre ambos bloques */
+    max-width: 960px; /* Ancho máximo de la sección del carrito */
+    margin: 0 auto; /* Centra el contenedor completo */
+    padding: 30px 20px;
+  }
+
+  /* La lista aprovecha el espacio izquierdo */
+  .cart-list {
+    flex-grow: 1;
+    max-width: 700px;
+    /* padding: 0; Limpiamos paddings heredados de móvil si es necesario */
+  }
+
+  /* El aside mantiene su tamaño fijo a la derecha */
+  .order-summary {
+    margin-top: 0; /* Quitamos el espacio superior requerido en móvil */
+    flex-shrink: 0; /* Evita que el ancho del aside se deforme */
+  }
+}
+
+@media (min-width: 1200px) {
+  .cart-container {
+    max-width: 1200px;
+  }
+}
